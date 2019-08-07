@@ -7,3 +7,47 @@
        url('/assets/fonts/Futura Book BT.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('/assets/fonts/Futura Book BT.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+
+.rainbow{
+		animation: rainbow 5s linear;
+		animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(235,0,0);
+		}
+		8%{
+			color: rgb(235,127,0);
+		}
+		16%{
+			color: rgb(235,235,0);
+		}
+		25%{
+			color: rgb(127,235,0);
+		}
+		33%{
+			color: rgb(0,235,0);
+		}
+		41%{
+			color: rgb(0,235,127);
+		}
+		50%{
+			color: rgb(0,235,235);
+		}
+		58%{
+			color: rgb(0,127,235);
+		}
+		66%{
+			color: rgb(0,0,235);
+		}
+		75%{
+			color: rgb(127,0,235);
+		}
+		83%{
+			color: rgb(235,0,235);
+		}
+		91%{
+			color: rgb(235,0,127);
+		}
+}
