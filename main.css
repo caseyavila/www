@@ -10,12 +10,12 @@
 
 @font-face {
   font-family: 'Brandon';
-  src: url('/assets/fonts/brandontext-light-webfont.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/brandontext-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/brandontext-light-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/assets/fonts/brandontext-light-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('/assets/fonts/brandontext-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/brandontext-light-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/brandontext.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/brandontext.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/brandontext.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/brandontext.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/brandontext.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/brandontext.svg#svgFontName') format('svg'); /* Legacy iOS */
 }	   
 
 .rainbow{
