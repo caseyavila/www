@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Futura';
-  src: url('Futura Book BT.eot'); /* IE9 Compat Modes */
-  src: url('Futura Book BT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('Futura Book BT.woff2') format('woff2'), /* Super Modern Browsers */
-       url('Futura Book BT.woff') format('woff'), /* Pretty Modern Browsers */
-       url('Futura Book BT.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('Futura Book BT.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('\assets\fonts\Futura Book BT.eot'); /* IE9 Compat Modes */
+  src: url('\assets\fonts\Futura Book BT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('\assets\fonts\Futura Book BT.woff2') format('woff2'), /* Super Modern Browsers */
+       url('\assets\fonts\Futura Book BT.woff') format('woff'), /* Pretty Modern Browsers */
+       url('\assets\fonts\Futura Book BT.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('\assets\fonts\Futura Book BT.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
