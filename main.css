@@ -58,17 +58,17 @@ li a {
   text-decoration: none;
 }
 
-ul a {
+.und {
   position: relative;
   color: white;
   text-decoration: none;
 }
 
-ul a:hover {
+.und:hover {
   color: white;
 }
 
-ul a:before {
+.und:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -84,7 +84,7 @@ ul a:before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-ul a:hover:before {
+.und:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -98,3 +98,5 @@ h1 {
 p {
   line-height: 1.5;
 }
+
+  
