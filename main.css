@@ -38,6 +38,7 @@
 		91%{background-color: rgb(235,0,127);}
 }
 
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -57,17 +58,17 @@ li a {
   text-decoration: none;
 }
 
-.und {
+ul a {
   position: relative;
   color: white;
   text-decoration: none;
 }
 
-.und:hover {
+ul a:hover {
   color: white;
 }
 
-.und:before {
+ul a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -83,7 +84,7 @@ li a {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.und:hover:before {
+ul a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
