@@ -24,18 +24,18 @@
 }
 
 @keyframes rainbow{
-		100%,0%{color: rgb(235,0,0);}
-		8%{color: rgb(235,127,0);}
-		16%{color: rgb(235,235,0);}
-		25%{color: rgb(127,235,0);}
-		33%{color: rgb(0,235,0);}
-		41%{color: rgb(0,235,127);}
-		50%{color: rgb(0,235,235);}
-		58%{color: rgb(0,127,235);}
-		66%{color: rgb(0,0,235);}
-		75%{color: rgb(127,0,235);}
-		83%{color: rgb(235,0,235);}
-		91%{color: rgb(235,0,127);}
+		100%,0%{background-color: rgb(235,0,0);}
+		8%{background-color: rgb(235,127,0);}
+		16%{background-color: rgb(235,235,0);}
+		25%{background-color: rgb(127,235,0);}
+		33%{background-color: rgb(0,235,0);}
+		41%{background-color: rgb(0,235,127);}
+		50%{background-color: rgb(0,235,235);}
+		58%{background-color: rgb(0,127,235);}
+		66%{background-color: rgb(0,0,235);}
+		75%{background-color: rgb(127,0,235);}
+		83%{background-color: rgb(235,0,235);}
+		91%{background-color: rgb(235,0,127);}
 }
 
 ul {
@@ -74,7 +74,8 @@ ul a:before {
   height: 2px;
   bottom: -1px;
   left: 0;
-  background-color: white;
+  animation: rainbow 2s linear;
+  animation-iteration-count: infinite;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
