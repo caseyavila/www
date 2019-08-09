@@ -18,8 +18,8 @@
        url('/assets/fonts/brandontext.svg#svgFontName') format('svg'); /* Legacy iOS */
 }	   
 
-.rainbow:hover{
-  animation: rainbow 0.7s linear;
+.rainbowlogo:hover{
+  animation: rainbowfill 0.7s linear;
   animation-iteration-count: infinite;
 }
 
@@ -38,7 +38,7 @@
   91%{background-color: rgb(235,0,127);}
 }
 
-@keyframes rainbow{
+@keyframes rainbowfill{
   100%,0%{fill: rgb(235,0,0);}
   8%{fill: rgb(235,127,0);}
   16%{fill: rgb(235,235,0);}
