@@ -23,6 +23,11 @@
   animation-iteration-count: infinite;
 }
 
+.rainbow:hover{
+  animation: rainbow 5s linear;
+  animation-iteration-count: infinite;
+}
+
 @keyframes rainbowback{
   100%,0%{background-color: rgb(235,0,0);}
   8%{background-color: rgb(235,127,0);}
@@ -53,6 +58,20 @@
   91%{fill: rgb(235,0,127);}
 }
 
+@keyframes rainbow{
+  100%,0%{color: rgb(235,0,0);}
+  8%{color: rgb(235,127,0);}
+  16%{color: rgb(235,235,0);}
+  25%{color: rgb(127,235,0);}
+  33%{color: rgb(0,235,0);}
+  41%{color: rgb(0,235,127);}
+  50%{color: rgb(0,235,235);}
+  58%{color: rgb(0,127,235);}
+  66%{color: rgb(0,0,235);}
+  75%{color: rgb(127,0,235);}
+  83%{color: rgb(235,0,235);}
+  91%{color: rgb(235,0,127);}
+}
 
 ul {
   list-style-type: none;
@@ -112,6 +131,7 @@ h1 {
 
 p {
   line-height: 1.5;
+  font-family:Brandon; 
+  font-size:14px;
 }
-
   
