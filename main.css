@@ -76,28 +76,25 @@
   91%{color: rgb(235,0,127);}
 }
 
-ul {
+.navul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-li {
+.navli {
   float: right;
-}
-
-li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  margin: 20px 20px 3px 20px;
-  text-decoration: none;
 }
 
 .und {
   position: relative;
   color: white;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  margin: 20px 20px 3px 20px;
   text-decoration: none;
 }
 
@@ -130,6 +127,12 @@ li a {
 h1 {
   font-size: 21px;
   margin: 20px 0px 10px 0px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 20px 0px 10px 0px;
+  font-weight: 400;
 }
 
 p {
