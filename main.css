@@ -138,11 +138,27 @@ h2 {
 
 p {
   line-height: 1.5;
-  font-family:Brandon; 
-  font-size:14px;
+  font-family: Brandon; 
+  font-size: 14px;
 }
 
 li {
   font-family:Brandon;
   line-height: 1.7;  
+}
+
+hr {
+  border: 0;
+  border-top-width: 1px;
+  border-top-color: gray;
+  border-top-style: solid;
+}
+
+code {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: gray;
+  background-color: #191919;
+  padding: 0.15rem;
 }
