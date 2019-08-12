@@ -142,8 +142,9 @@ p {
   font-size: 14px;
 }
 
-li {
-  line-height: 1.7;  
+.list > li {
+  line-height: 1.7;
+  margin: 10px 0px 0px 0px;  
 }
 
 hr {
