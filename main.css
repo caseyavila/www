@@ -156,7 +156,8 @@ hr {
 }
 
 code {
-  font-family:Consolas;
+  font-size: 13px;
+  font-family: Consolas;
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
