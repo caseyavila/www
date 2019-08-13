@@ -24,7 +24,7 @@
 }
 
 .rainbow:hover{
-  animation: rainbow 5s linear;
+  animation: rainbow 1s linear;
   animation-iteration-count: infinite;
 }
 
