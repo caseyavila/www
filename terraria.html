@@ -43,7 +43,7 @@
 		  <li>The font you want to use installed</li>
 		  <li>The official <a style='color:white' class='rainbow' href='https://web.archive.org/web/20190809032342/https://forums.terraria.org/index.php?threads/custom-fonts-in-1-3-5.57015/' target='_blank'>font extension</a></li>
 		  <li>Microsoft <a style='color:white' class='rainbow' href='https://my.visualstudio.com/Downloads?q=visual%20studio%202010&wt.mc_id=o~msft~vscom~older-downloads' target='_blank'>Visual Studio C# 2010 Express</a> (labeled as "Visual Studio 2010 VCS Express")</li>
-		  <li>Microsoft <a style='color:white' class='rainbow' href='go.microsoft.com/fwlink/?LinkID=201134' target='_blank'>Games for Windows Live</a></li>
+		  <li>Microsoft <a style='color:white' class='rainbow' href='https://go.microsoft.com/fwlink/?LinkID=201134' target='_blank'>Games for Windows Live</a></li>
 		  <li>Microsoft <a style='color:white' class='rainbow' href='https://www.microsoft.com/en-us/download/details.aspx?id=23714' target='_blank'>XNA Game Studio 4.0</a></li>
 		</ul>
 		<hr>
@@ -54,7 +54,30 @@
 		  <li>Under Visual C#, navigate to XNA Game Studio 4.0</li>
 		  <li>Select 'Windows Game 4.0'</li>
 		  <li>Save your project with <code>Ctrl-S</code></li>
+		  <li>In the Solution Explorer on the right, right-click 'WindowsGame1Content (Content)'</li>
+		  <li>Under 'Add,' select 'New Item...'</li>
+		  <li>Select 'Spritefont' and add with the name as <code>SpriteFont1.spritefont</code></li>
 		  <li>Extract <code>font-extension.zip</code></li>
+		  <li>Right click <code>ReLogic.Content.Pipeline.dll</code> and select 'Properties'</li>
+		  <li>Check 'Unblock'</li>
+		  <li>Move <code>ReLogic.Content.Pipeline.dll</code> to the folder <br><code>/Documents/Visual Studio 2010/Projects/WindowsGame1/WindowsGame1/WindowsGame1Content</code></li>
+		  <li>In Visual C#, right-click 'References' under 'WindowsGame1Content (Content)'</li>
+		  <li>Select 'Add Reference'</li>
+		  <li>Navigate to 'Browse' and add <code>ReLogic.Content.Pipeline.dll</code> as a reference</li>
+		  <li>Open <code>SampleFont.dynamicfont</code> with a text editor and copy all of the text</li>
+		  <li>Paste the text into <code>SpriteFont1.spritefont</code> within Visual C# (Delete the existing text before pasting)</li>
+		  <li>Save <code>SpriteFont1.spritefont</code> with <code>Ctrl-S</code></li>
+		  <li>In the Properties window on the lower right, edit the 'Content Importer' and 'Content Processor' of <code>SpriteFont1.spritefont</code> to 'Dynamic Sprite Font Importer' and 'Dynamic Sprite Font Importer' respectively</li>
+		  <li>In the Solution Explorer, right-click 'WindowsGame1' and select 'Properties'</li>
+		  <li>Change the 'Game Profile' to 'Use Reach...'</li>		  
+		  <li>Replace 'Andy' with the name of the font you want to use (It must be installed on your computer)</li>
+		  <li>Change the font size to your preferred setting depending on experimentation and which font file you are choosing to replace <i>See step 26</i> (You might not get the correct size on the first try)</li>
+		  <li>Press <code>F6</code> to 'Build Solution'</li>
+		  <li>Navigate to <code>Documents/Visual Studio 2010/WindowsGame1/WindowsGame1/bin/x86/Debug/Content/Fonts</code> to locate the <code>.xnb</code> file</li>
+		  <li>Change the name of the <code>.xnb</code> file to either <code>Death_Text.xnb</code>, <code>Item_Stack.xnb</code>, <code>Mouse_Text.xnb</code>, or <code>Title_Font.xnb</code>, depending on which of the four font files you intend to replace (Each of these files require a different size to appear normal. Therefore, experimenting with sizes in necessary)</li>
+		  <li>Move the <code>.xnb</code> file to <code>C:/Program Files (x86)/Steam/steamapps/common/Terraria/Content/Fonts</code> (You may want to backup the original files)</li>
+		  <li>Launch Terraria and view your fonts, noting if they appear too small or large</li>
+		  <li>Repeat steps 22 - 28 for each of the 4 main font files, changing the size depending on your observations in step 28 (<code>Combat_Text.xnb</code> and <code>Combat_Crit.xnb</code> are generally considered to be fine without changing, however feel free to change them)</li>
 		</ol>
 	</body>
 </html>
