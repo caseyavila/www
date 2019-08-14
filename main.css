@@ -127,6 +127,9 @@
 h1 {
   font-size: 21px;
   margin: 20px 0px 10px 0px;
+  font-family:Futura;
+  margin-top:10px;
+  font-weight:400;
 }
 
 h2 {
@@ -157,7 +160,7 @@ hr {
 
 code {
   font-size: 13px;
-  font-family: Consolas;
+  font-family: Consolas, monospace;
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
