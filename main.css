@@ -124,6 +124,17 @@
   transform: scaleX(1);
 }
 
+.page {
+  background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
+  background-color: #292929; 
+  color: white; 
+  text-align: left; 
+  max-width: 900px; 
+  margin: auto; 
+  padding-left: 6%; 
+  padding-right: 6%
+}
+
 h1 {
   font-size: 21px;
   margin: 20px 0px 10px 0px;
