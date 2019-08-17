@@ -125,7 +125,7 @@
 }
 
 .page {
-  background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
+  background-image: url("/assets/img/noise.png");
   background-color: #292929; 
   color: white; 
   text-align: left; 
