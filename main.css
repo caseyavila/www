@@ -135,6 +135,19 @@
   padding-right: 6%
 }
 
+.center {
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  margin-top: -150px;
+  margin-left: -400px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  animation: rainbow 0.7s linear;
+  animation-iteration-count: infinite;
+}
+
 h1 {
   font-size: 21px;
   margin: 20px 0px 10px 0px;
