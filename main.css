@@ -150,6 +150,12 @@
   animation-iteration-count: infinite;
 }
 
+.list > li {
+  line-height: 1.7;
+  margin: 15px 0px 0px 0px;  
+  font-size: 14px;
+}
+
 h1 {
   font-size: 21px;
   margin: 20px 0px 10px 0px;
@@ -168,12 +174,6 @@ h2 {
 p {
   line-height: 1.5;
   font-family: Brandon; 
-  font-size: 14px;
-}
-
-.list > li {
-  line-height: 1.7;
-  margin: 15px 0px 0px 0px;  
   font-size: 14px;
 }
 
