@@ -153,6 +153,10 @@
   font-size: 14px;
 }
 
+.list_nobullets {
+  list-style-type: none;
+}
+
 .err_msg {
   text-align: center;
 }
