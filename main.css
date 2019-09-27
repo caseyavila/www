@@ -21,6 +21,10 @@
   animation-iteration-count: infinite;
 }
 
+.rainbowlogo {
+  margin-top: 10px;
+}
+
 .rainbow {
   color:white;
 }
