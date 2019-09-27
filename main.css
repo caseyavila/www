@@ -158,11 +158,6 @@
   text-decoration: none;
   color: white;
 
-.musiclist:hover {
-  animation: rainbow 0.7s linear;
-  animation-iteration-count: infinite;
-}
-
 .err_msg {
   text-align: center;
 }
