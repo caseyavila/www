@@ -152,6 +152,10 @@
   animation-iteration-count: infinite;
 }
 
+.list {
+  font-family: Brandon;
+}
+
 .list > li {
   line-height: 1.7;
   margin: 15px 0px 0px 0px;  
