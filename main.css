@@ -144,6 +144,7 @@
 }
 
 .list {
+  list-style-type: none;
   font-family: Brandon;
 }
 
@@ -154,7 +155,6 @@
 }
 
 .list_nobullets {
-  list-style-type: none;
 }
 
 .err_msg {
