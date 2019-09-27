@@ -154,9 +154,14 @@
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 .musiclist {
   text-decoration: none;
   color: white;
+=======
+.list_nobullets {
+}
+>>>>>>> parent of c2a9744... Removed unused class
 
 .err_msg {
   text-align: center;
