@@ -82,6 +82,10 @@
   91%{color: rgb(235,0,127);}
 }
 
+::selection {
+  background: #39CCCC;
+}
+
 .navul {
   list-style-type: none;
   margin: 0;
