@@ -137,7 +137,10 @@
 }
 
 .page {
-  background-image: url("/assets/img/noise.png");
+  background-image: url("data:image/gif;base64,R0lGODlhBAAEAKECABERESQkJP///////yH5BAEKAAIALAAAAAAEAAQAAAIFhB6nhlIAOw==") !important;
+  background-repeat: repeat !important;
+  background-color: #181818 !important;
+  /* background-image: url("/assets/img/noise.png"); */
   background-color: #212121; 
   color: white; 
   text-align: left; 
