@@ -138,10 +138,10 @@
 
 .page {
   background-image: url("data:image/gif;base64,R0lGODlhBAAEAKECABERESQkJP///////yH5BAEKAAIALAAAAAAEAAQAAAIFhB6nhlIAOw==") !important;
-  background-repeat: repeat;
-  background-color: #181818;
+  background-repeat: repeat !important;
+  background-color: #181818 !important;
   /* background-image: url("/assets/img/noise.png"); */
-  /* background-color: #212121; */
+  background-color: #212121; 
   color: white; 
   text-align: left; 
   max-width: 900px; 
@@ -185,29 +185,29 @@ h1 {
   margin: 20px 0px 10px 0px;
   font-family: Futura;
   margin-top: 10px;
- padding-right: 6 font-weight: 400;
-}                
-                 
-hist {           2 {
- list-style-type: font-size: 18px;
- font-family: Bra margin: 20px 0px 10px 0px;
-                  font-weight: 400;
-                  font-family: Futura;
-}ist > li {
- line-height: 1.7
-pmargin: 15px 0px {
- font-size: 14px; line-height: 1.5;
-                  font-family: Brandon; 
-                  font-size: 14px;
-}rr_msg {
- text-align: cent
-h                r {
-                  border: 0;
- rr_main {        border-top-width: 1px;
- width: 800px;    border-top-color: gray;
- height: 300px;   border-top-style: solid;
-}position: absolu
- margin-top: -200
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 20px 0px 10px 0px;
+  font-weight: 400;
+  font-family: Futura;
+}
+
+p {
+  line-height: 1.5;
+  font-family: Brandon; 
+  font-size: 14px;
+}
+
+hr {
+  border: 0;
+  border-top-width: 1px;
+  border-top-color: gray;
+  border-top-style: solid;
+}
+
 code {
   font-size: 13px;
   font-family: Consolas, monospace;
