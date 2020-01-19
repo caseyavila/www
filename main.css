@@ -199,7 +199,7 @@
 .footerhr {
   position: absolute;
   bottom: 0;
-  height: 2.5rem;            /* Footer height */
+  height: 3rem;            /* Footer height */
   width: 100%;
   border-top-color: #4d4d4d;  /* Color of hr */
 }
