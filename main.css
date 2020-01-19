@@ -188,7 +188,7 @@
 .footer {
   position: absolute;
   bottom: 0;
-  height: 2.5rem;            /* Footer height */
+  height: 1.8rem;
   width: 100%;
   text-align: right;
   color: #4d4d4d;
@@ -199,9 +199,9 @@
 .footerhr {
   position: absolute;
   bottom: 0;
-  height: 3rem;            /* Footer height */
+  height: 1.8rem;
   width: 100%;
-  border-top-color: #4d4d4d;  /* Color of hr */
+  border-top-color: #4d4d4d;
 }
 
 #page-container {
