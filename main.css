@@ -192,9 +192,16 @@
   width: 100%;
   text-align: right;
   color: #4d4d4d;
-  border-top-color: #4d4d4d;  /*Color of hr */
   font-size: 14px;
   font-family: Futura;
+}
+
+.footerhr {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;            /* Footer height */
+  width: 100%;
+  border-top-color: #4d4d4d;  /* Color of hr */
 }
 
 #page-container {
