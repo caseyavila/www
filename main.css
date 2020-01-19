@@ -185,6 +185,27 @@
   font-size: 1.1em !important;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;            /* Footer height */
+  width: 100%;
+  text-align: right;
+  color: #4d4d4d;
+  border-top-color: #4d4d4d;  /*Color of hr */
+  font-size: 14px;
+  font-family: Brandon;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
 h1 {
   font-size: 21px;
   margin: 20px 0px 10px 0px;
@@ -226,3 +247,4 @@ code {
   padding-top: 0.10rem;
   padding-bottom: 0.10rem;
 }
+
