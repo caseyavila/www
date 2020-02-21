@@ -204,6 +204,12 @@
   border-top-color: #4d4d4d;
 }
 
+.article-paragraph {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #page-container {
   position: relative;
   min-height: 100vh;
