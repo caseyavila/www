@@ -83,7 +83,7 @@
 }
 
 ::selection {
-  background: #666666;
+  background: rgba(107, 107, 107, 0.99);
   color: white;
 }
 
