@@ -163,6 +163,8 @@
 }
 
 .err_msg {
+  margin-top: 0px;
+  padding-top: 14px;
   text-align: center;
 }
 
