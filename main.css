@@ -9,12 +9,12 @@
 }
 
 @font-face {
-    font-family: 'Brandon';
-    src: url('/assets/fonts/brandontext.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/brandontext.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/brandontext.woff') format('woff'), /* Pretty Modern Browsers */
-         url('/assets/fonts/brandontext.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('/assets/fonts/brandontext.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'WorkSans';
+    src: url('/assets/fonts/WorkSans-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/WorkSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/WorkSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/assets/fonts/WorkSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/WorkSans-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
     font-display: swap;
 }	   
 
@@ -156,13 +156,13 @@
 
 .list {
     list-style-type: none;
-    font-family: Brandon;
+    font-family: WorkSans;
 }
 
 .list > li {
     line-height: 1.7;
     margin: 15px 0px 0px 0px;  
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .err_msg {
@@ -241,8 +241,8 @@ h2 {
 
 p {
     line-height: 1.5;
-    font-family: Brandon; 
-    font-size: 14px;
+    font-family: WorkSans; 
+    font-size: 13px;
 }
 
 hr {
