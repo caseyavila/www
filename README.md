@@ -1,4 +1,4 @@
-# My Website
+# Website
 If you want to view the rendered site, visit [caseyavila.ga](https://caseyavila.ga/)
 ## Site Features
 - About me
