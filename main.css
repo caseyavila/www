@@ -1,19 +1,21 @@
 @font-face {
-  font-family: 'Futura';
-  src: url('/assets/fonts/Futura-Book-BT.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/Futura-Book-BT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/Futura-Book-BT.woff') format('woff'), /* Pretty Modern Browsers */
-       url('/assets/fonts/Futura-Book-BT.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/Futura-Book-BT.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'Futura';
+    src: url('/assets/fonts/Futura-Book-BT.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Futura-Book-BT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/Futura-Book-BT.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/assets/fonts/Futura-Book-BT.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/Futura-Book-BT.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Brandon';
-  src: url('/assets/fonts/brandontext.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/brandontext.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/brandontext.woff') format('woff'), /* Pretty Modern Browsers */
-       url('/assets/fonts/brandontext.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/brandontext.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'Brandon';
+    src: url('/assets/fonts/brandontext.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/brandontext.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/brandontext.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/assets/fonts/brandontext.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/brandontext.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-display: swap;
 }	   
 
 .rainbowlogo:hover {
