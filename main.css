@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Futura';
-    src: url('/assets/fonts/Futura-Book-BT.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/Futura-Book-BT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/Futura-Book-BT.woff') format('woff'), /* Pretty Modern Browsers */
-         url('/assets/fonts/Futura-Book-BT.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('/assets/fonts/Futura-Book-BT.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'Jost';
+    src: url('/assets/fonts/Jost-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Jost-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/Jost-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/assets/fonts/Jost-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/Jost-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
     font-display: swap;
 }
 
@@ -95,7 +95,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Futura;
+    font-family: Jost;
     font-size: 22px;
 }
 
@@ -183,7 +183,7 @@
     animation: rainbow 0.7s linear;
     animation-iteration-count: infinite;
     font-size: 200px; 
-    font-family: Futura;
+    font-family: Jost;
 }
 
 .katex {
@@ -198,7 +198,7 @@
     text-align: right;
     color: #4d4d4d;
     font-size: 14px;
-    font-family: Futura;
+    font-family: Jost;
 }
 
 .footerhr {
@@ -227,7 +227,7 @@
 h1 {
     font-size: 21px;
     margin: 20px 0px 10px 0px;
-    font-family: Futura;
+    font-family: Jost;
     margin-top: 10px;
     font-weight: 400;
 }
@@ -236,7 +236,7 @@ h2 {
     font-size: 18px;
     margin: 20px 0px 10px 0px;
     font-weight: 400;
-    font-family: Futura;
+    font-family: Jost;
 }
 
 p {
