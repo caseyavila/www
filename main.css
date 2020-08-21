@@ -1,20 +1,20 @@
 @font-face {
-    font-family: 'Jost';
-    src: url('/assets/fonts/Jost-Regular.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/Jost-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/Jost-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('/assets/fonts/Jost-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('/assets/fonts/Jost-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: "Jost";
+    src: url("/assets/fonts/Jost-Regular.eot"); /* IE9 Compat Modes */
+    src: url("/assets/fonts/Jost-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("/assets/fonts/Jost-Regular.woff") format("woff"), /* Pretty Modern Browsers */
+         url("/assets/fonts/Jost-Regular.ttf")  format("truetype"), /* Safari, Android, iOS */
+         url("/assets/fonts/Jost-Regular.svg#svgFontName") format("svg"); /* Legacy iOS */
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'WorkSans';
-    src: url('/assets/fonts/WorkSans-Regular.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/WorkSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/WorkSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('/assets/fonts/WorkSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('/assets/fonts/WorkSans-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: "WorkSans";
+    src: url("/assets/fonts/WorkSans-Regular.eot"); /* IE9 Compat Modes */
+    src: url("/assets/fonts/WorkSans-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("/assets/fonts/WorkSans-Regular.woff") format("woff"), /* Pretty Modern Browsers */
+         url("/assets/fonts/WorkSans-Regular.ttf")  format("truetype"), /* Safari, Android, iOS */
+         url("/assets/fonts/WorkSans-Regular.svg#svgFontName") format("svg"); /* Legacy iOS */
     font-display: swap;
 }	   
 
