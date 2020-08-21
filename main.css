@@ -128,15 +128,12 @@
     animation: rainbowback 2s linear;
     animation-iteration-count: infinite;
     visibility: hidden;
-    -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
 
 .und:hover:before {
     visibility: visible;
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
@@ -144,8 +141,6 @@
     background-image: url("data:image/gif;base64,R0lGODlhBAAEAKECABERESQkJP///////yH5BAEKAAIALAAAAAAEAAQAAAIFhB6nhlIAOw==") !important;
     background-repeat: repeat !important;
     background-color: #181818 !important;
-    /* background-image: url("/assets/img/noise.png"); */
-    /* background-color: #212121; */
     color: white; 
     text-align: left; 
     max-width: 900px; 
