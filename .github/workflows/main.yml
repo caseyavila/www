@@ -17,9 +17,9 @@ jobs:
       run: chmod +x make
     - name: Build with script
       run: ./make
-    - name: Deploy 🚀
+    - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
-        FOLDER: .
+        FOLDER: docs

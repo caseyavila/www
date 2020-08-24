@@ -14,22 +14,22 @@ cd site || exit
 
 page() {
 
-    mkdir -p "../$(dirname ${page})"
+    mkdir -p "../docs/$(dirname ${page})"
 
     case "$page_type" in 
         "generic")
-            cat header.html > "../$page";
-            sed "s/^/${tab}/" "${page_type}/${page}" >> "../$page";
-            cat footer.html >> "../$page";
+            cat header.html > "../docs/$page";
+            sed "s/^/${tab}/" "${page_type}/${page}" >> "../docs/$page";
+            cat footer.html >> "../docs/$page";
         ;;
         "katex")
-            cat header-katex.html > "../$page";
-            sed "s/^/${tab}/" "${page_type}/${page}" >> "../$page";
-            cat footer.html >> "../$page";
+            cat header-katex.html > "../docs/$page";
+            sed "s/^/${tab}/" "${page_type}/${page}" >> "../docs/$page";
+            cat footer.html >> "../docs/$page";
         ;;
         "footer-only")
-            cat "${page_type}/${page}" > "../$page";
-            cat footer.html >> "../$page";
+            cat "${page_type}/${page}" > "../docs/$page";
+            cat footer.html >> "../docs/$page";
         ;;
     esac
 }
