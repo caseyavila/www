@@ -7,21 +7,23 @@ page() {
 
     # Add header, then indented body, then footer for each page type
     case "$page_type" in 
-        "generic")
-            cat header.html > "$build/$page";
-            sed "s/^/$tab/" "$page_type/$page" >> "$build/$page";
-            cat footer.html >> "$build/$page";
+        '<!-- generic -->')
+            cat templates/header.html > "$build/$page";
+            sed -e 1d -e "s/^/$tab/" "$page" >> "$build/$page";
+            cat templates/footer.html >> "$build/$page";
         ;;
-        "katex")
-            cat header-katex.html > "$build/$page";
-            sed "s/^/$tab/" "$page_type/$page" >> "$build/$page";
-            cat footer.html >> "$build/$page";
+        '<!-- katex -->')
+            cat templates/header-katex.html > "$build/$page";
+            sed -e 1d -e "s/^/$tab/" "$page" >> "$build/$page";
+            cat templates/footer.html >> "$build/$page";
         ;;
-        "footer-only")
-            cat "$page_type/$page" > "$build/$page";
-            cat footer.html >> "$build/$page";
+        '<!-- footer-only -->')
+            sed 1d "$page" > "$build/$page";
+            cat templates/footer.html >> "$build/$page";
         ;;
     esac
+
+    echo "$build/$page"
 }
 
 main() {
@@ -34,17 +36,15 @@ main() {
     done 
 
     # Set build directory
-    build="../docs"
+    build='../docs'
 
     # Move into the src directory
     cd src || exit
         
-    # Enter into each page type and launch page for each page within
-    for page_type in "generic" "katex" "footer-only"; do
-        (cd "$page_type" && find . -type f) | while read -r page; do
-            echo "Making: $page"
-            page
-        done
+    # Execute page on every page within the src directory (exclude templates)
+    find . -type f -not -path './templates/*' | while read -r page; do
+        page_type="$(sed -n 1p "$page")"
+        page
     done
 }
 
