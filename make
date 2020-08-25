@@ -36,8 +36,8 @@ main() {
     # Set build directory
     build="../docs"
 
-    # Move into the site directory
-    cd site || exit
+    # Move into the src directory
+    cd src || exit
         
     # Enter into each page type and launch page for each page within
     for page_type in "generic" "katex" "footer-only"; do
