@@ -4,8 +4,7 @@ main() {
     cd src || exit
 
     find -- * -type f -not -path 'templates/*' | while read -r page; do
-        (cd ../docs && rm -r "$page")
-        echo rm "$page"
+        (cd ../docs && rm -r "$page" && echo rm "$page")
     done
 }
 
