@@ -42,7 +42,7 @@ main() {
     cd src || exit
         
     # Execute page on every page within the src directory (exclude templates)
-    find * -type f -not -path 'templates/*' | while read -r page; do
+    find -- * -type f -not -path 'templates/*' | while read -r page; do
         page_type="$(sed -n 1p "$page")"
         page
     done
