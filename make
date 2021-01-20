@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd -P -- "$(dirname -- "$0")" && pwd -P
+
 page() {
 
     # Make directories for any pages
