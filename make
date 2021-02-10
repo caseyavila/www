@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd -P -- "$(dirname -- "$0")" && pwd -P
+cd -P -- "$(dirname -- "$0")"
 
 page() {
 
@@ -11,11 +11,6 @@ page() {
     case "$page_type" in 
         '<!-- generic -->')
             cat templates/header.html > "$build/$page";
-            sed -e 1d -e "s/^/$tab/" "$page" >> "$build/$page";
-            cat templates/footer.html >> "$build/$page";
-        ;;
-        '<!-- katex -->')
-            cat templates/header-katex.html > "$build/$page";
             sed -e 1d -e "s/^/$tab/" "$page" >> "$build/$page";
             cat templates/footer.html >> "$build/$page";
         ;;
