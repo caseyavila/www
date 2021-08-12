@@ -1,5 +1,5 @@
 # Website
-If you want to view the rendered site, visit [caseyavila.ga](https://caseyavila.ga/)
+If you want to view the rendered site, visit [caseyavila.com](https://caseyavila.com/)
 
 ## Features
 - Fast: Other than fonts, each page just is an html file and css file.
