@@ -96,7 +96,7 @@
     padding: 0;
     overflow: hidden;
     font-family: Jost;
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .navli {
@@ -150,14 +150,12 @@
 }
 
 .list {
-    list-style-type: none;
     font-family: WorkSans;
 }
 
 .list > li {
     line-height: 1.7;
     margin: 15px 0px 0px 0px;  
-    font-size: 13px;
 }
 
 .err_msg {
@@ -220,7 +218,7 @@
 }
 
 h1 {
-    font-size: 21px;
+    font-size: 23px;
     margin: 20px 0px 10px 0px;
     font-family: Jost;
     margin-top: 10px;
@@ -228,7 +226,6 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
     margin: 20px 0px 10px 0px;
     font-weight: 400;
     font-family: Jost;
@@ -237,7 +234,6 @@ h2 {
 p {
     line-height: 1.5;
     font-family: WorkSans; 
-    font-size: 13px;
 }
 
 hr {
