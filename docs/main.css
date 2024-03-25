@@ -24,11 +24,11 @@
 }
 
 .rainbowlogo {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .rainbow {
-    color:white;
+    color: white;
 }
 
 .rainbow:hover {
@@ -97,10 +97,12 @@
     overflow: hidden;
     font-family: Jost;
     font-size: 23px;
+    display: inline-block;
+    float: right;
 }
 
 .navli {
-    float: right;
+    float: left;
 }
 
 .und {
