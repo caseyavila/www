@@ -130,13 +130,10 @@
     animation: rainbowback 2s linear;
     animation-iteration-count: infinite;
     visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
 }
 
 .und:hover:before {
     visibility: visible;
-    transform: scaleX(1);
 }
 
 .page {
