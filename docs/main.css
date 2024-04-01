@@ -96,7 +96,7 @@
     padding: 0;
     overflow: hidden;
     font-family: Jost;
-    font-size: 23px;
+    font-size: 25px;
     display: inline-block;
     float: right;
 }
@@ -217,7 +217,7 @@
 }
 
 h1 {
-    font-size: 23px;
+    font-size: 25px;
     margin: 20px 0px 10px 0px;
     font-family: Jost;
     margin-top: 10px;
