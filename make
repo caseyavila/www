@@ -35,11 +35,13 @@ main() {
     # Set build directory
     build='../docs'
 
+    cp -r src/* docs
+
     # Move into the src directory
     cd src || exit
         
     # Execute page on every page within the src directory (exclude templates)
-    find -- * -type f -not -path 'templates/*' | while read -r page; do
+    find -- *.html -type f | while read -r page; do
         page_type="$(sed -n 1p "$page")"
         page
     done
