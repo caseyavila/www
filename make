@@ -35,6 +35,7 @@ main() {
     # Set build directory
     build='../docs'
 
+    mkdir -p docs
     cp -r src/* docs
 
     # Move into the src directory
