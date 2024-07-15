@@ -18,34 +18,16 @@
     margin-top: 15px;
 }
 
-.rainbow {
-    color: white;
+a {
+    color: #58a6ff;
+    text-decoration: none;
 }
 
-.rainbow:hover {
+a:hover {
     animation: rainbow 1s linear infinite;
 }
 
-.rainbow:before {
-    color: white;
-}
-
 /* please tell me there's a better way to do this */
-@keyframes rainbow-border {
-    100%, 0% {border-bottom-color: rgb(235,0,0);}
-    8% {border-bottom-color: rgb(235,127,0);}
-    16% {border-bottom-color: rgb(235,235,0);}
-    25% {border-bottom-color: rgb(127,235,0);}
-    33% {border-bottom-color: rgb(0,235,0);}
-    41% {border-bottom-color: rgb(0,235,127);}
-    50% {border-bottom-color: rgb(0,235,235);}
-    58% {border-bottom-color: rgb(0,127,235);}
-    66% {border-bottom-color: rgb(0,0,235);}
-    75% {border-bottom-color: rgb(127,0,235);}
-    83% {border-bottom-color: rgb(235,0,235);}
-    91% {border-bottom-color: rgb(235,0,127);}
-}
-
 @keyframes rainbow-fill {
     100%, 0% {fill: rgb(235,0,0);}
     8% {fill: rgb(235,127,0);}
@@ -94,25 +76,18 @@ nav {
 
         li {
             float: left;
+
+            a {
+                position: relative;
+                color: white;
+                display: inline-block;
+                color: white;
+                text-align: center;
+                margin: 0px 20px;
+                text-decoration: none;
+            }
         }
     }
-}
-
-nav ul li a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    text-align: center;
-    margin: 0px 20px;
-    text-decoration: none;
-}
-
-nav ul li a h2:hover {
-    animation: rainbow-border 1s linear infinite;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
 }
 
 .page {
