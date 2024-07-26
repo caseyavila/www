@@ -6,8 +6,6 @@ ROOT = "root"
 DOCS = "docs"
 EXTRAS = "extras"
 TEMPLATES = "templates"
-HEADER = f"{TEMPLATES}/header.html"
-FOOTER = f"{TEMPLATES}/footer.html"
 
 def src_to_doc(path):
     return DOCS + path[len(ROOT):]
@@ -15,15 +13,11 @@ def src_to_doc(path):
 def compile_page(path):
     with open(path, "r") as in_file, open(src_to_doc(path), "w") as out_file:
         for line in in_file:
-            match line:
-                case "<!--- header --->\n":
-                    with open(HEADER, "r") as header:
-                        out_file.write(header.read())
-                case "<!--- footer --->\n":
-                    with open(FOOTER, "r") as footer:
-                        out_file.write(footer.read())
-                case _:
-                    out_file.write(line)
+            if line.startswith("<!--- ") and line.endswith(" --->\n"):
+                with open(f"{TEMPLATES}/{line[6:-6]}", "r") as template:
+                    out_file.write(template.read())
+            else:
+                out_file.write(line)
 
 def compile_dir(directory):
     os.system(f"mkdir -p {src_to_doc(directory)}");
