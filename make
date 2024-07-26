@@ -1,51 +1,38 @@
-#!/bin/sh
+#!/usr/bin/env python3
 
-cd -P -- "$(dirname -- "$0")"
+import os
 
-page() {
+ROOT = "root"
+DOCS = "docs"
+EXTRAS = "extras"
+TEMPLATES = "templates"
+HEADER = f"{TEMPLATES}/header.html"
+FOOTER = f"{TEMPLATES}/footer.html"
 
-    # Make directories for any pages
-    mkdir -p "$build/$(dirname "$page")"
+def src_to_doc(path):
+    return DOCS + path[len(ROOT):]
 
-    # Add header, then indented body, then footer for each page type
-    case "$page_type" in 
-        '<!-- generic -->')
-            cat templates/header.html > "$build/$page";
-            sed -e 1d -e "s/^/$tab/" "$page" >> "$build/$page";
-            cat templates/footer.html >> "$build/$page";
-        ;;
-        '<!-- footer-only -->')
-            sed 1d "$page" > "$build/$page";
-            cat templates/footer.html >> "$build/$page";
-        ;;
-    esac
+def compile_page(path):
+    with open(path, "r") as in_file, open(src_to_doc(path), "w") as out_file:
+        for line in in_file:
+            match line:
+                case "<!--- header --->\n":
+                    with open(HEADER, "r") as header:
+                        out_file.write(header.read())
+                case "<!--- footer --->\n":
+                    with open(FOOTER, "r") as footer:
+                        out_file.write(footer.read())
+                case _:
+                    out_file.write(line)
 
-    echo "$page"
-}
+def compile_dir(directory):
+    os.system(f"mkdir -p {src_to_doc(directory)}");
+    for file in os.scandir(directory):
+        if file.is_file():
+            compile_page(file.path)
+        else:
+            compile_dir(file.path)
+        print(file.path)
 
-main() {
-
-    # Set the tab length for every page
-    i=0
-    while [ $i -ne 4 ]; do
-        tab=$tab"    "
-        i=$(( i + 1 ))
-    done 
-
-    # Set build directory
-    build='../docs'
-
-    mkdir -p docs
-    cp -r src/* docs
-
-    # Move into the src directory
-    cd src || exit
-        
-    # Execute page on every page within the src directory (exclude templates)
-    find -- *.html -type f | while read -r page; do
-        page_type="$(sed -n 1p "$page")"
-        page
-    done
-}
-
-main
+compile_dir(ROOT)
+os.system(f"cp -r {EXTRAS}/* {DOCS}");
