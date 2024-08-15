@@ -22,11 +22,12 @@ def compile_page(path):
 def compile_dir(directory):
     os.system(f"mkdir -p {src_to_doc(directory)}");
     for file in os.scandir(directory):
-        if file.is_file():
+        if file.is_file() and file.name.endswith(".html"):
             compile_page(file.path)
-        else:
+            print(file.path)
+        elif file.is_dir():
             compile_dir(file.path)
-        print(file.path)
+            print(file.path)
 
 compile_dir(ROOT)
 os.system(f"cp -r {EXTRAS}/* {DOCS}");
