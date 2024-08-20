@@ -276,27 +276,36 @@ function main() {
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
-  canvas.addEventListener("mousedown", (event) => {
+  let start = function(e) {
     clicked = true;
-  });
+  };
 
-  addEventListener("mouseup", (event) => {
-    clicked = false;
-  });
+  canvas.addEventListener("mousedown", start);
+  canvas.addEventListener("touchstart", start);
 
-  addEventListener("mousemove", (event) => {
+  let drag = function(e) {
     if (clicked) {
-      xRot += ((event.clientX - xMouse) * 0.01);
+      xRot += ((e.clientX - xMouse) * 0.01);
       xRot %= Math.PI * 2;
 
-      yRot += (event.clientY - yMouse) * 0.01;
+      yRot += (e.clientY - yMouse) * 0.01;
       yRot = Math.min(yRot, Math.PI / 2);
       yRot = Math.max(yRot, -Math.PI / 2);
     }
 
-    xMouse = event.clientX;
-    yMouse = event.clientY;
-  });
+    xMouse = e.clientX;
+    yMouse = e.clientY;
+  };
+
+  addEventListener("mousemove", drag);
+  addEventListener("touchmove", drag);
+
+  let end = function(e) {
+    clicked = false;
+  };
+
+  addEventListener("mouseup", end);
+  addEventListener("touchend", end);
 
   // Only continue if WebGL is available and working
   if (gl === null) {

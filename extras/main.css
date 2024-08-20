@@ -69,24 +69,25 @@ nav {
     font-family: Jost;
     float: right;
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+}
 
-        li {
-            float: left;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-            a {
-                position: relative;
-                color: white;
-                display: inline-block;
-                text-align: center;
-                margin-left: 30px;
-                text-decoration: none;
-            }
-        }
-    }
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-left: 30px;
+    text-decoration: none;
 }
 
 .page {
