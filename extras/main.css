@@ -81,9 +81,8 @@ nav {
                 position: relative;
                 color: white;
                 display: inline-block;
-                color: white;
                 text-align: center;
-                margin: 0px 20px;
+                margin-left: 30px;
                 text-decoration: none;
             }
         }
@@ -157,6 +156,12 @@ nav {
 
 #content-wrap {
     padding-bottom: 5rem;
+}
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
 }
 
 h1 {
