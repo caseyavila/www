@@ -259,8 +259,8 @@ function setColorAttribute(gl, buffers, programInfo) {
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }
 
-let xRot = 0.0;
-let yRot = 0.0;
+let xRot = -0.4;
+let yRot = 0.4;
 let xMouse;
 let yMouse;
 let clicked = false;
@@ -277,6 +277,10 @@ function main() {
   const gl = canvas.getContext("webgl");
 
   let start = function(e) {
+    if (e.type == "touchstart") {
+      xMouse = e.changedTouches[0].screenX;
+      yMouse = e.changedTouches[0].screenY;
+    }
     clicked = true;
   };
 
@@ -284,17 +288,29 @@ function main() {
   canvas.addEventListener("touchstart", start);
 
   let drag = function(e) {
+    let xLoc;
+    let yLoc;
+
+    if (e.type == "touchmove") {
+      xLoc = e.changedTouches[0].screenX;
+      yLoc = e.changedTouches[0].screenY;
+    } else {
+      xLoc = e.clientX;
+      yLoc = e.clientY;
+    }
+
     if (clicked) {
-      xRot += ((e.clientX - xMouse) * 0.01);
+      xRot += (xLoc - xMouse) * 0.01;
       xRot %= Math.PI * 2;
 
-      yRot += (e.clientY - yMouse) * 0.01;
+      yRot += (yLoc - yMouse) * 0.01;
       yRot = Math.min(yRot, Math.PI / 2);
       yRot = Math.max(yRot, -Math.PI / 2);
     }
 
-    xMouse = e.clientX;
-    yMouse = e.clientY;
+    xMouse = xLoc;
+    yMouse = yLoc;
+
   };
 
   addEventListener("mousemove", drag);
