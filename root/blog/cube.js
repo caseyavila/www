@@ -1,8 +1,6 @@
 function initBuffers(gl) {
   const positionBuffer = initPositionBuffer(gl);
-
   const colorBuffer = initColorBuffer(gl);
-
   const indexBuffer = initIndexBuffer(gl);
 
   return {
@@ -13,63 +11,27 @@ function initBuffers(gl) {
 }
 
 function initPositionBuffer(gl) {
-  // Create a buffer for the square's positions.
   const positionBuffer = gl.createBuffer();
 
-  // Select the positionBuffer as the one to apply buffer
-  // operations to from here out.
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
   const positions = [
-    // Front face
-    -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
-
-    // Back face
-    -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
-
-    // Top face
-    -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
-
-    // Bottom face
-    -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
-
-    // Right face
-    1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
-
-    // Left face
-    -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
+    -1.0, -1.0, 0.0, 1.0, -1.0, 0.0, 1.0, 1.0, 0.0, -1.0, 1.0, 0.0,
   ];
 
-  // Now pass the list of positions into WebGL to build the
-  // shape. We do this by creating a Float32Array from the
-  // JavaScript array, then use it to fill the current buffer.
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
   return positionBuffer;
 }
 
 function initColorBuffer(gl) {
-  const faceColors = [
-    [1.0, 0.0, 0.0, 1.0], // Front face
-    [1.0, 0.5, 0.0, 1.0], // Back face
-    [0.0, 0.0, 1.0, 1.0], // Top face
-    [0.0, 1.0, 0.0, 1.0], // Bottom face
-    [1.0, 1.0, 0.0, 1.0], // Right face
-    [1.0, 1.0, 1.0, 1.0], // Left face
-  ];
-
-  // Convert the array of colors into a table for all the vertices.
-
-  var colors = [];
-
-  for (var j = 0; j < faceColors.length; ++j) {
-    const c = faceColors[j];
-    // Repeat each color four times for the four vertices of the face
-    colors = colors.concat(c, c, c, c);
-  }
 
   const colorBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+
+  const c = [1.0, 0.0, 0.0, 1.0];
+  const colors = [].concat(c, c, c, c);
+
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
 
   return colorBuffer;
@@ -89,40 +51,8 @@ function initIndexBuffer(gl) {
     2,
     0,
     2,
-    3, // front
-    4,
-    5,
-    6,
-    4,
-    6,
-    7, // back
-    8,
-    9,
-    10,
-    8,
-    10,
-    11, // top
-    12,
-    13,
-    14,
-    12,
-    14,
-    15, // bottom
-    16,
-    17,
-    18,
-    16,
-    18,
-    19, // right
-    20,
-    21,
-    22,
-    20,
-    22,
-    23, // left
+    3,
   ];
-
-  // Now send the element array to GL
 
   gl.bufferData(
     gl.ELEMENT_ARRAY_BUFFER,
@@ -162,43 +92,38 @@ function drawScene(gl, programInfo, buffers) {
 
   // Set the drawing position to the "identity" point, which is
   // the center of the scene.
-  const modelViewMatrix = mat4.create();
+  var modelViewMatrix = mat4.create();
 
   // Now move the drawing position a bit to where we want to
   // start drawing the square.
   mat4.translate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to translate
-    [0.0, 0.0, -6.0]
+    [0.0, 0.0, -10.0]
   ); // amount to translate
 
   mat4.rotate(
-    modelViewMatrix, // destination matrix
-    modelViewMatrix, // matrix to rotate
-    yRot, // amount to rotate in radians
+    modelViewMatrix,
+    modelViewMatrix,
+    yRot,
     [1, 0, 0]
   );
 
   mat4.rotate(
-    modelViewMatrix, // destination matrix
-    modelViewMatrix, // matrix to rotate
-    xRot, // amount to rotate in radians
+    modelViewMatrix,
+    modelViewMatrix,
+    xRot,
     [0, 1, 0]
   );
 
-  // Tell WebGL how to pull out the positions from the position
-  // buffer into the vertexPosition attribute.
   setPositionAttribute(gl, buffers, programInfo);
 
   setColorAttribute(gl, buffers, programInfo);
 
-  // Tell WebGL which indices to use to index the vertices
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
-  // Tell WebGL to use our program when drawing
   gl.useProgram(programInfo.program);
 
-  // Set the shader uniforms
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.projectionMatrix,
     false,
@@ -211,7 +136,7 @@ function drawScene(gl, programInfo, buffers) {
   );
 
   {
-    const vertexCount = 36;
+    const vertexCount = 6;
     const type = gl.UNSIGNED_SHORT;
     const offset = 0;
     gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
@@ -268,12 +193,8 @@ let deltaTime = 0;
 
 main();
 
-//
-// start here
-//
 function main() {
   const canvas = document.querySelector("#cube");
-  // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
   let start = function(e) {
@@ -304,8 +225,8 @@ function main() {
       xRot %= Math.PI * 2;
 
       yRot += (yLoc - yMouse) * 0.01;
-      yRot = Math.min(yRot, Math.PI / 2);
-      yRot = Math.max(yRot, -Math.PI / 2);
+      yRot = Math.min(yRot, Math.PI / 4);
+      yRot = Math.max(yRot, -Math.PI / 4);
     }
 
     xMouse = xLoc;
@@ -331,12 +252,8 @@ function main() {
     return;
   }
 
-  // Set clear color to black, fully opaque
   gl.clearColor(0.0, 0.0, 0.0, 0.0);
-  // Clear the color buffer with specified clear color
   gl.clear(gl.COLOR_BUFFER_BIT);
-
-  // Vertex shader program
 
   const vsSource = `
     attribute vec4 aVertexPosition;
@@ -346,20 +263,28 @@ function main() {
     uniform mat4 uProjectionMatrix;
 
     varying lowp vec4 vColor;
+    varying lowp vec4 vPosition;
 
     void main(void) {
       gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
       vColor = aVertexColor;
+      vPosition = aVertexPosition;
     }
   `;
 
-  // Fragment shader program
-
   const fsSource = `
     varying lowp vec4 vColor;
+    varying lowp vec4 vPosition;
 
     void main(void) {
-      gl_FragColor = vColor;
+      if (vPosition.x < -0.8 ||
+          vPosition.x > 0.8 ||
+          vPosition.y < -0.8 ||
+          vPosition.y > 0.8) {
+        gl_FragColor = vec4(0, 0, 0, 1);
+      } else {
+        gl_FragColor = vColor;
+      }
     }
   `;
 
@@ -433,22 +358,11 @@ function initShaderProgram(gl, vsSource, fsSource) {
   return shaderProgram;
 }
 
-//
-// creates a shader of the given type, uploads the source and
-// compiles it.
-//
 function loadShader(gl, type, source) {
   const shader = gl.createShader(type);
 
-  // Send the source to the shader object
-
   gl.shaderSource(shader, source);
-
-  // Compile the shader program
-
   gl.compileShader(shader);
-
-  // See if it compiled successfully
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
     alert(
