@@ -5,7 +5,7 @@ If you want to view the rendered site, visit [caseyavila.com](https://caseyavila
 - Fast: Unless the page is doing something fancy, each page just is an html
   file, css file, and some fonts.
 - Simple: Each page is generated before hosting by an extremely simple python
-  script (<50 lines!). Source for pages are in `root`.
+  script (<35 lines!). Source for pages are in `root`.
 
 ## How to Use
 - To make the website, run `./make`. You may need to mark the file as
