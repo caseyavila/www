@@ -90,16 +90,16 @@ nav ul li a {
     text-decoration: none;
 }
 
-.page {
+body {
     background-image: url("data:image/gif;base64,R0lGODlhBAAEAKECABERESQkJP///////yH5BAEKAAIALAAAAAAEAAQAAAIFhB6nhlIAOw==") !important;
     background-repeat: repeat !important;
     background-color: #181818 !important;
     color: white; 
-    text-align: left; 
     max-width: 900px; 
     margin: auto; 
-    padding-left: 6%; 
-    padding-right: 6%
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .list {
@@ -131,32 +131,19 @@ nav ul li a {
     font-family: Jost;
 }
 
-.footer {
+.content {
+    flex: 1;
+}
+
+footer {
+    /*
     position: absolute;
     bottom: 0;
-    height: 1.8rem;
+    */
     width: 100%;
     text-align: right;
     color: #4d4d4d;
     font-size: 14px;
-    font-family: Jost;
-}
-
-.footerhr {
-    position: absolute;
-    bottom: 0;
-    height: 1.9rem;
-    width: 100%;
-    border-top-color: #4d4d4d;
-}
-
-#page-container {
-    position: relative;
-    min-height: 100vh;
-}
-
-#content-wrap {
-    padding-bottom: 5rem;
 }
 
 canvas {
@@ -171,13 +158,19 @@ h1, h2, h3 {
 }
 
 p {
-    line-height: 1.5;
     font-family: Inter; 
 }
 
 hr {
-    border: 0;
-    border-top-width: 1px;
-    border-top-color: gray;
-    border-top-style: solid;
+    border: 1px solid gray;
+}
+
+.tags {
+    margin-top: 0;
+    color: #606060;
+    font-size: 11pt;
+}
+
+.project {
+    margin-bottom: 10px;
 }
