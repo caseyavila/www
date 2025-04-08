@@ -10,6 +10,8 @@
     font-display: swap;
 }	   
 
+
+
 .rainbowlogo:hover {
     animation: rainbow-fill 1s linear infinite;
 }
@@ -122,6 +124,9 @@ body {
 }
 
 footer {
+    hr {
+        border: 1px solid #4d4d4d;
+    }
     width: 100%;
     text-align: right;
     color: #4d4d4d;
@@ -140,7 +145,8 @@ h1, h2, h3 {
 }
 
 p {
-    font-family: Inter; 
+    font-family: Inter;
+    line-height: 1.5;
 }
 
 hr {
