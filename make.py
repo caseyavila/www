@@ -22,10 +22,13 @@ def compile_page(in_file, out_file):
 def compile_dir(directory):
     os.system(f"mkdir -p {src_to_doc(directory)}");
     for file in os.scandir(directory):
-        if file.is_file() and not file.name.startswith("."):
-            with open(file.path, "r") as in_file, open(src_to_doc(file.path), "w") as out_file:
-                compile_page(in_file, out_file)
-                print(file.path)
+        if file.is_file():
+            if file.name.endswith(".html"):
+                with open(file.path, "r") as in_file, open(src_to_doc(file.path), "w") as out_file:
+                    compile_page(in_file, out_file)
+            else:
+                os.system(f"cp {file.path} {src_to_doc(file.path)}")
+            print(file.path)
         elif file.is_dir():
             compile_dir(file.path)
 

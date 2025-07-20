@@ -1,16 +1,21 @@
 @font-face {
     font-family: "Jost";
-    src: url("/assets/fonts/Jost-Regular.ttf");
+    src: url("/assets/fonts/jost-regular.woff2");
     font-display: swap;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url("/assets/fonts/Inter_18pt-Regular.ttf");
+    src: url("/assets/fonts/inter-regular.woff2");
     font-display: swap;
-}	   
+}
 
-
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/inter-bold.woff2");
+    font-weight: bold;
+    font-display: swap;
+}
 
 .rainbowlogo:hover {
     animation: rainbow-fill 1s linear infinite;
@@ -151,15 +156,17 @@ p {
 
 hr {
     border: 1px solid gray;
-    margin: 25px auto 25px;
 }
 
-.tags {
+.listing {
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.date {
     margin-top: 0;
-    color: #606060;
+    margin-bottom: 13px;
+    color: gray;
     font-size: 11pt;
 }
 
-.project {
-    margin-bottom: 10px;
-}
