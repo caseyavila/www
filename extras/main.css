@@ -149,7 +149,7 @@ h1, h2, h3 {
     font-family: Jost;
 }
 
-p {
+p, li {
     font-family: Inter;
     line-height: 1.5;
 }
